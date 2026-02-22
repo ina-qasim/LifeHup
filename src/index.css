@@ -1,0 +1,1119 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #111827;
+  --card-bg: #1f2937;
+  --accent: #22c55e;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
+.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --card-bg: #e5e7eb;
+  --accent: #22c55e;
+  --text-primary: #111827;
+  --text-secondary: #475569;
+}
+
+
+
+/* themecontex */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+  background: #0b0f19;
+  color: #ffffff;
+}
+
+body.dark .hero-banner::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+body.dark .movie-card {
+  background: #111827;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body.dark .movie-details p {
+  color: #9ca3af;
+}
+
+body.dark .row-title {
+  color: #ffffff;
+}
+
+body.dark .scroll-btn {
+  background: rgba(0,0,0,0.7);
+}
+
+/* ================= LIGHT MODE ================= */
+
+body.light {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+body.light .hero-banner::before {
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.5)
+  );
+}
+
+body.light .hero-content h1 {
+  color: #111827;
+}
+
+body.light .hero-content p {
+  color: #374151;
+}
+
+body.light .movie-card {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+body.light .movie-details h4 {
+  color: #111827;
+}
+
+body.light .movie-details p {
+  color: #4b5563;
+}
+
+body.light .row-title {
+  color: #111827;
+}
+
+body.light .scroll-btn {
+  background: rgba(0,0,0,0.1);
+  color: #111827;
+}
+
+/* ================= BUTTON STYLE ================= */
+
+.cart-btn,
+.movie-details button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cart-btn:hover,
+.movie-details button:hover {
+  background: #16a34a;
+}
+
+
+.hero-content h1 {
+  font-size: 60px;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+
+/* ================= NAVBAR STYLE ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(15px);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Links container */
+.links {
+  display: flex;
+  align-items: center;
+}
+
+/* Links */
+.links a {
+  position: relative;
+  margin: 0 18px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.links a:hover {
+  color: var(--accent);
+}
+
+/* Animated  */
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* Theme  */
+.theme-toggle {
+  margin-left: 20px;
+}
+
+/* Cart */
+.cart-badge {
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  animation: badgePop 0.4s ease;
+}
+
+
+
+
+
+/* ================= THEME TOGGLE ================= */
+
+.theme-toggle {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  background: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s ease;
+  padding: 0;
+}
+
+/* Dark background */
+.theme-toggle.dark {
+  background: #1f2937;
+}
+
+/* Circle */
+.toggle-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #facc15;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.4s ease;
+}
+
+.theme-toggle.dark .toggle-circle {
+  transform: translateX(30px);
+  background: #60a5fa;
+}
+
+/* Glow effect */
+.theme-toggle:hover {
+  box-shadow: 0 0 10px rgba(191, 191, 225, 0.5);
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #0f172a, #111827);
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Card */
+.card {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* movies style */
+
+
+/* ================= HERO ================= */
+
+
+/* HERO */
+.hero-banner {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  color: #d1d5db;
+}
+
+.cart-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ROWS */
+.row-section {
+  margin-top: 40px;
+}
+
+.row-title {
+  padding-left: 60px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.row-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.movies-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+}
+
+.movies-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* MOVIE CARD */
+.movie-card {
+  min-width: 350px;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.movie-details {
+  padding: 12px;
+}
+
+.movie-details h4 {
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.movie-details p {
+  color: #9ca3af;
+  margin: 4px 0;
+}
+
+.movie-details button {
+   background: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* SCROLL ARROWS */
+.scroll-btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.scroll-btn.left {
+  left: 20px;
+}
+
+.scroll-btn.right {
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* music style */
+
+.music-hero {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.music-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.5)
+  );
+}
+
+.music-hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.music-hero-overlay h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+/* ================= MUSIC ROW ================= */
+
+.music-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+}
+
+.music-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= MUSIC CARD ================= */
+
+.music-card {
+  min-width: 350px;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.music-card:hover {
+  transform: scale(1.05);
+}
+
+.music-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.music-details {
+  padding: 12px;
+}
+
+.music-details h4 {
+  margin-bottom: 5px;
+}
+
+.music-details p {
+  color: #9ca3af;
+  margin: 4px 0;
+}
+.play-btn {
+  background:  #22c55e;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  background:  #22c55e;
+}
+
+
+.music-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background:#2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.5);
+}
+
+/* ================= CART BUTTON ================= */
+
+.cart-btn {
+  background:  #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #1d4ed8;
+}
+
+
+
+
+
+
+
+/* bookstyle */
+
+.books-hero {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.books-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.5)
+  );
+}
+
+.books-hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.books-hero-overlay h1 {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+/* ================= BOOK ROW ================= */
+
+.books-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+}
+
+.books-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= BOOK CARD ================= */
+
+.book-card {
+  min-width: 350px;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.book-details {
+  padding: 12px;
+}
+
+.book-details h4 {
+  margin-bottom: 5px;
+}
+
+.book-details p {
+  color: #9ca3af;
+  margin: 4px 0;
+}
+
+/* ================= SCROLL BUTTONS ================= */
+
+.scroll-btn {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.scroll-btn:hover {
+  background: black;
+}
+
+/* ================= SHARED CART BUTTON ================= */
+
+.cart-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #1d4ed8;
+}
+.book-author {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.book-desc {
+  font-size: 13px;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  height: 60px;
+  overflow: hidden;
+}
+
+.book-price {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+
+
+/* cart style */
+/* ================= CART SECTIONS ================= */
+
+.cart-page {
+  padding: 60px;
+}
+
+.cart-section {
+  margin-bottom: 60px;
+}
+
+.cart-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+}
+
+.cart-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= CARD STYLE ================= */
+
+.cart-card-style {
+  min-width: 220px;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.cart-card-style:hover {
+  transform: scale(1.05);
+}
+
+.cart-card-style img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 12px;
+}
+
+.card-details h4 {
+  margin-bottom: 6px;
+}
+
+.card-details p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #d1d5db;
+}
+
+/* ================= REMOVE BUTTON ================= */
+
+.remove-btn {
+  background: #ef4444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}
+/* ================= TOTAL SECTION ================= */
+
+.cart-summary {
+  margin-top: 60px;
+  text-align: right;
+}
+
+.cart-summary h2 {
+  margin-bottom: 15px;
+}
+
+.buy-btn {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+
+
+
+
+
+
+
+/* home style */
+/* ================= HERO ================= */
+
+
+.home-hero {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  transition: background-image 1s ease-in-out;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3)
+  );
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-hero-content {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.home-hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.home-hero-content button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= SECTIONS ================= */
+
+.home-section {
+  margin: 60px 0;
+  padding: 0 60px;
+}
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-btn {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+.home-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.home-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= CARD ================= */
+
+.home-card {
+  min-width: 220px;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+}
+
+.home-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.home-card-info {
+  padding: 12px;
+}
+
+.home-card-info h4 {
+  margin-bottom: 6px;
+}
+
+
+
+
+/* footer css */
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 60px 80px 30px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-section ul li:hover {
+  color: #3b82f6;
+}
+
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social-icons span {
+  font-size: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons span:hover {
+  transform: scale(1.2);
+  color: #3b82f6;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #1f2937;
+  padding-top: 20px;
+}body.light .footer {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+body.light .footer-section ul li:hover {
+  color: #2563eb;
+}
+
+.scroll-btn {
+  transition: 0.3s;
+}
+
+.scroll-btn:hover {
+  transform: scale(1.2);
+}
+.navbar {
+  backdrop-filter: blur(15px);
+  background: rgba(15,23,42,0.7);
+  transition: 0.3s;
+}
+.navbar {
+  backdrop-filter: blur(15px);
+  background: rgba(15,23,42,0.7);
+  transition: 0.3s;
+}
+
+
+
+
+/* animation  */
+.home-section,
+.row-section,
+.cart-section {
+  animation: slideUp 0.7s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
