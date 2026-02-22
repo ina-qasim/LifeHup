@@ -54,7 +54,7 @@ const Books = ({ cart, setCart }) => {
         </div>
       </div>
 
-      {/* ================= CATEGORY ROWS ================= */}
+      {/* ================= CATEGORY ROWss ================= */}
       {categories.map((category) => {
         const books = booksData.filter(
           (book) => book.category === category
