@@ -9,7 +9,6 @@ import Movies from "./Pages/Movies";
 import Music from "./Pages/Music";
 import Books from "./Pages/Books";
 import Cart from "./Pages/Cart";
-import Details from "./Pages/Details";
 import NotFound from "./Pages/NotFound";
 
 function App() {
@@ -83,15 +82,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/details/:id"
-          element={
-            <Details
-              cart={cart}
-              setCart={setCart}
-            />
-          }
-        />
+      
 
         {/* 404 Page */}
         <Route path="*" element={<NotFound />} />
