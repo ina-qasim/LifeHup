@@ -1,7 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Cart = ({ cart, setCart }) => {
   const scrollRefs = useRef({});
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
@@ -19,6 +20,15 @@ const Cart = ({ cart, setCart }) => {
       left: 400,
       behavior: "smooth",
     });
+  };
+
+  const handleBuy = () => {
+    setShowSuccess(true);
+    setCart([]);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
   };
 
   const movies = cart.filter((item) => item.year);
@@ -47,10 +57,10 @@ const Cart = ({ cart, setCart }) => {
             ref={(el) => (scrollRefs.current[type] = el)}
           >
             {items.map((item) => (
-              <div key={item.id} className="cart-card-style">
+              <div key={item.id} className="movie-card">
                 <img src={item.image} alt={item.title} />
 
-                <div className="card-details">
+                <div className="movie-details">
                   <h4>{item.title}</h4>
 
                   {item.author && <p>{item.author}</p>}
@@ -95,14 +105,25 @@ const Cart = ({ cart, setCart }) => {
           {renderSection("🎵 Music", music, "music")}
           {renderSection("📚 Books", books, "books")}
 
-          {/* TOTAL  */}
           <div className="cart-summary">
             <h2>Total: ${total}</h2>
-            <button className="buy-btn">
+            <button className="buy-btn" onClick={handleBuy}>
               Buy Now
             </button>
           </div>
         </>
+      )}
+
+      {showSuccess && (
+        <div className="success-popup">
+          <div className="success-card">
+            <h2>✅ Payment Successful!</h2>
+            <p>Your order has been placed successfully.</p>
+            <button onClick={() => setShowSuccess(false)}>
+              Close
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -37,7 +37,6 @@ const Books = ({ cart, setCart }) => {
   return (
     <div className="books-page">
 
-      {/* ================= HERO ================= */}
       <div
         className="books-hero"
         style={{ backgroundImage: `url(${heroBook.image})` }}
@@ -54,7 +53,6 @@ const Books = ({ cart, setCart }) => {
         </div>
       </div>
 
-      {/* ================= CATEGORY ROWss ================= */}
       {categories.map((category) => {
         const books = booksData.filter(
           (book) => book.category === category
@@ -81,23 +79,23 @@ const Books = ({ cart, setCart }) => {
                 }
               >
                 {books.map((book) => (
-                  <div className="book-card">
-  <img src={book.image} alt={book.title} />
+                  <div key={book.id} className="movie-card">
+                    <img src={book.image} alt={book.title} />
 
-  <div className="book-details">
-    <h4>{book.title}</h4>
-    <p>{book.author}</p>
-    <p className="book-desc">{book.description}</p>
-    <p>${book.price}</p>
+                    <div className="movie-details">
+                      <h4>{book.title}</h4>
+                      <p>{book.author}</p>
+                      <p className="book-desc">{book.description}</p>
+                      <p>${book.price}</p>
 
-    <button
-      className="cart-btn"
-      onClick={() => addToCart(book)}
-    >
-      Add to Cart
-    </button>
-  </div>
-</div>
+                      <button
+                        className="cart-btn"
+                        onClick={() => addToCart(book)}
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
                 ))}
               </div>
 

@@ -8,12 +8,7 @@ const Home = ({ cart, setCart }) => {
   const navigate = useNavigate();
   const scrollRefs = useRef({});
 
-  const heroItems = [
-    data[0],
-    musicData[0],
-    booksData[0],
-  ];
-
+  const heroItems = [data[0], musicData[0], booksData[0]];
   const [currentHero, setCurrentHero] = useState(0);
 
   useEffect(() => {
@@ -52,19 +47,13 @@ const Home = ({ cart, setCart }) => {
     <div className="home-section">
       <div className="home-section-header">
         <h2>{title}</h2>
-        <button
-          className="view-all-btn"
-          onClick={() => navigate(path)}
-        >
+        <button className="view-all-btn" onClick={() => navigate(path)}>
           View All →
         </button>
       </div>
 
       <div className="row-wrapper">
-        <button
-          className="scroll-btn left"
-          onClick={() => scrollLeft(section)}
-        >
+        <button className="scroll-btn left" onClick={() => scrollLeft(section)}>
           ◀
         </button>
 
@@ -73,19 +62,12 @@ const Home = ({ cart, setCart }) => {
           ref={(el) => (scrollRefs.current[section] = el)}
         >
           {items.slice(0, 10).map((item) => (
-            <div key={item.id} className="home-card">
-              <img
-                src={item.image}
-                alt={item.title}
-                onClick={() => navigate(`/details/${item.id}`)}
-              />
-              <div className="home-card-info">
+            <div key={item.id} className="movie-card">
+              <img src={item.image} alt={item.title} />
+              <div className="movie-details">
                 <h4>{item.title}</h4>
                 <p>${item.price}</p>
-                <button
-                  className="cart-btn"
-                  onClick={() => addToCart(item)}
-                >
+                <button className="cart-btn" onClick={() => addToCart(item)}>
                   Add to Cart
                 </button>
               </div>
@@ -93,10 +75,7 @@ const Home = ({ cart, setCart }) => {
           ))}
         </div>
 
-        <button
-          className="scroll-btn right"
-          onClick={() => scrollRight(section)}
-        >
+        <button className="scroll-btn right" onClick={() => scrollRight(section)}>
           ▶
         </button>
       </div>
@@ -105,21 +84,16 @@ const Home = ({ cart, setCart }) => {
 
   return (
     <div className="home-page">
-
-      <div
-        className="home-hero fade"
-        style={{ backgroundImage: `url(${hero.image})` }}
-      >
+      {/* HERO */}
+      <div className="home-hero fade" style={{ backgroundImage: `url(${hero.image})` }}>
         <div className="home-hero-content">
           <h1>{hero.title}</h1>
           <p>{hero.description || hero.artist || hero.author}</p>
-
-          <button onClick={() => addToCart(hero)}>
-            Add to Cart
-          </button>
+          <button onClick={() => addToCart(hero)}>Add to Cart</button>
         </div>
       </div>
 
+      {/* ROWS */}
       {renderRow("🎬 Movies", data, "movies", "/movies")}
       {renderRow("🎵 Music", musicData, "music", "/music")}
       {renderRow("📚 Books", booksData, "books", "/books")}

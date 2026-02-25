@@ -8,14 +8,12 @@ const Music = ({ cart, setCart }) => {
   const audioRef = useRef(null);
   const [playingId, setPlayingId] = useState(null);
 
-  // Add to Cart
   const addToCart = (song) => {
     if (!cart.some((item) => item.id === song.id)) {
       setCart([...cart, song]);
     }
   };
 
-  // Play
   const handlePlay = (song) => {
     if (playingId === song.id) {
       audioRef.current.pause();
@@ -38,7 +36,6 @@ const Music = ({ cart, setCart }) => {
     }, 20000);
   };
 
-  // Scroll Controls
   const scrollLeft = (genre) => {
     scrollRefs.current[genre]?.scrollBy({
       left: -400,
@@ -58,7 +55,7 @@ const Music = ({ cart, setCart }) => {
   return (
     <div className="music-page">
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <div
         className="music-hero"
         style={{ backgroundImage: `url(${heroSong.image})` }}
@@ -85,7 +82,7 @@ const Music = ({ cart, setCart }) => {
         </div>
       </div>
 
-      {/* ================= GENRE ROWS ================= */}
+      {/* GENRE ROWS */}
       {genres.map((genre) => {
         const songs = musicData.filter(
           (song) => song.genre === genre
@@ -108,10 +105,10 @@ const Music = ({ cart, setCart }) => {
                 ref={(el) => (scrollRefs.current[genre] = el)}
               >
                 {songs.map((song) => (
-                  <div key={song.id} className="music-card">
+                  <div key={song.id} className="movie-card">
                     <img src={song.image} alt={song.title} />
 
-                    <div className="music-details">
+                    <div className="movie-details">
                       <h4>{song.title}</h4>
                       <p>{song.artist}</p>
                       <p>${song.price}</p>

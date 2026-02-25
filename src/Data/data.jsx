@@ -74,7 +74,7 @@ export const data = [
     rating: 8.7,
     year: 1999,
     description: "A hacker discovers reality is a simulation.",
-    image: "https://image.tmdb.org/t/p/w500/aoi5kEoJwR6fN9q2E9z1FMvx6FU.jpg",
+    image: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
     trailer: "https://www.youtube.com/embed/vKQi3bBA1y8"
   },
   {
@@ -85,7 +85,7 @@ export const data = [
     rating: 8.2,
     year: 1988,
     description: "A cop battles terrorists in a skyscraper.",
-    image: "https://image.tmdb.org/t/p/w500/1Jb7vQX1U3l6jP7n4Qn1ZfWwJkn.jpg",
+    image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     trailer: "https://www.youtube.com/embed/jaJuwKCmJbY"
   },
   {
@@ -131,7 +131,7 @@ export const data = [
     rating: 8.0,
     year: 2015,
     description: "A frontiersman fights for survival.",
-    image: "https://image.tmdb.org/t/p/w500/oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg",
+    image: "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
     trailer: "https://www.youtube.com/embed/LoebZZ8K5N0"
   },
   {
@@ -153,7 +153,7 @@ export const data = [
     rating: 7.4,
     year: 2016,
     description: "Mowgli raised by wolves.",
-    image: "https://image.tmdb.org/t/p/w500/eZXe5yyl0dM3q2yH9z3jYEtwXz3.jpg",
+    image: "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
     trailer: "https://www.youtube.com/embed/C4qgAaxB_pc"
   },
   {
@@ -221,7 +221,7 @@ export const data = [
     rating: 6.9,
     year: 2008,
     description: "Two immature men become stepbrothers.",
-    image: "https://image.tmdb.org/t/p/w500/1gWzZx6Y3Zp3TX0bY4Z1cdq9VHt.jpg",
+    image: "https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
     trailer: "https://www.youtube.com/embed/CewglxElBK0"
   },
 
@@ -234,7 +234,7 @@ export const data = [
     rating: 9.4,
     year: 2006,
     description: "A breathtaking exploration of our planet.",
-    image: "https://image.tmdb.org/t/p/w500/6z9VYvX7vX5wV9T0G0z7Lr1jQ8.jpg",
+    image: "https://image.tmdb.org/t/p/w500/pSgXKPU5h6U89ipF7HBYajvYt7j.jpg",
     trailer: "https://www.youtube.com/embed/aETNYyrqNYE"
   },
 
@@ -265,17 +265,8 @@ export const data = [
   },
 
   // ================= DOCUMENTARY =================
-{
-    id: 1,
-    title: "Planet Earth",
-    category: "documentary",
-    price: 12,
-    rating: 9.4,
-    year: 2006,
-    description: "A breathtaking exploration of our planet.",
-    image: "https://m.media-amazon.com/images/I/91VokXkn8hL._AC_SY679_.jpg",
-    trailer: "https://www.youtube.com/embed/aETNYyrqNYE"
-  },
+  
+   
   {
     id: 2,
     title: "The Last Dance",
@@ -284,7 +275,7 @@ export const data = [
     rating: 9.1,
     year: 2020,
     description: "Michael Jordan and the Chicago Bulls dynasty.",
-    image: "https://image.tmdb.org/t/p/w500/6F6iYgYlJ1kGzVYBoNvKcJsteVE.jpg",
+    image: "https://image.tmdb.org/t/p/w500/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg",
     trailer: "https://www.youtube.com/embed/JQk2hJs2ToA"
   },
   {
@@ -295,7 +286,7 @@ export const data = [
     rating: 8.2,
     year: 2018,
     description: "A climber attempts El Capitan without ropes.",
-    image: "https://m.media-amazon.com/images/I/81P6c-6h7JL._AC_SY679_.jpg",
+    image: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
     trailer: "https://www.youtube.com/embed/urRVZ4SW7WU"
   },
   {
@@ -306,7 +297,7 @@ export const data = [
     rating: 9.2,
     year: 2019,
     description: "Explore Earth’s natural beauty.",
-    image: "https://image.tmdb.org/t/p/w500/9JXqXn7r9JXqXn7r9JXqXn7r9JX.jpg",
+  image: "https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg",
     trailer: "https://www.youtube.com/embed/aETNYyrqNYE"
   },
   {
@@ -317,7 +308,7 @@ export const data = [
     rating: 7.6,
     year: 2020,
     description: "The dangerous human impact of social networking.",
-    image: "https://image.tmdb.org/t/p/w500/l0QnWwFv1iL0kEJ2VN6iEOX1q6f.jpg",
+    image: "https://image.tmdb.org/t/p/w500/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg",
     trailer: "https://www.youtube.com/embed/uaaC57tcci0"
   },
   {
@@ -328,7 +319,7 @@ export const data = [
     rating: 7.9,
     year: 2019,
     description: "Inside the mind of Bill Gates.",
-    image: "https://image.tmdb.org/t/p/w500/jH5eYpX5xX5xX5xX5xX5xX5x.jpg",
+  image: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
     trailer: "https://www.youtube.com/embed/6lL0o2n8PpQ"
   },
   {
@@ -339,7 +330,7 @@ export const data = [
     rating: 8.1,
     year: 2013,
     description: "A documentary about captive killer whales.",
-    image: "https://image.tmdb.org/t/p/w500/4o0XgQ6X5X5X5X5X5X5X5X5X.jpg",
+    image: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
     trailer: "https://www.youtube.com/embed/fLOeH-Oq_1Y"
   },
   {
@@ -350,7 +341,7 @@ export const data = [
     rating: 7.5,
     year: 2005,
     description: "The annual journey of emperor penguins.",
-    image: "https://image.tmdb.org/t/p/w500/8hP9D6l7V6l7V6l7V6l7V6l7.jpg",
+  image: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
     trailer: "https://www.youtube.com/embed/L7tWNwhSocE"
   },
   {
@@ -361,7 +352,7 @@ export const data = [
     rating: 8.2,
     year: 2021,
     description: "The devastating impact of fishing.",
-    image: "https://image.tmdb.org/t/p/w500/5Z9M1Z9M1Z9M1Z9M1Z9M1Z9M.jpg",
+  image: "https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg",
     trailer: "https://www.youtube.com/embed/1Q5CXN7soQg"
   },
   {
@@ -372,7 +363,7 @@ export const data = [
     rating: 8.2,
     year: 2016,
     description: "An in-depth look at racial inequality.",
-    image: "https://image.tmdb.org/t/p/w500/7nJ4FzZ9FzZ9FzZ9FzZ9FzZ9.jpg",
+  image: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
     trailer: "https://www.youtube.com/embed/K6IXQbXPO3I"
   },
 
@@ -442,7 +433,7 @@ export const data = [
   rating: 7.7,
   year: 2014,
   description: "Life of Stephen Hawking.",
-  image: "https://image.tmdb.org/t/p/w500/4Js1V1j3LzH0HcUu9OeXtfLOcA5.jpg",
+  image: "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
   trailer: "https://www.youtube.com/embed/Salz7uGp72c"
 },
 {
@@ -490,7 +481,7 @@ export const data = [
   rating: 8.0,
   year: 2003,
   description: "Captain Jack Sparrow adventures.",
-  image: "https://image.tmdb.org/t/p/w500/4L1tYYc47vN8KuRrE8mS0dVj1vj.jpg",
+    image: "https://image.tmdb.org/t/p/w500/pSgXKPU5h6U89ipF7HBYajvYt7j.jpg",
   trailer: "https://www.youtube.com/embed/naQr0uTrH_s"
 },
 {
@@ -505,7 +496,6 @@ export const data = [
   trailer: "https://www.youtube.com/embed/5PSNL1qE6VY"
 },
 
-// ================= MORE COMEDY =================
 {
   id: 37,
   title: "The Mask",
@@ -514,7 +504,7 @@ export const data = [
   rating: 6.9,
   year: 1994,
   description: "A man gains superpowers from a mask.",
-  image: "https://image.tmdb.org/t/p/w500/8g1KZzW6kV3qA9kZZgwyU0vbzUK.jpg",
+  image: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
   trailer: "https://www.youtube.com/embed/hOqVRwGVUkA"
 },
 {
@@ -525,11 +515,10 @@ export const data = [
   rating: 8.0,
   year: 2016,
   description: "A wisecracking anti-hero seeks revenge.",
-  image: "https://image.tmdb.org/t/p/w500/inVq3FRqcYIRl2la8iZikYYxFNR.jpg",
+  image: "https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
   trailer: "https://www.youtube.com/embed/Xithigfg7dA"
 },
 
-// ================= MORE DOCUMENTARY =================
 {
   id: 39,
   title: "Our Planet",
@@ -538,11 +527,10 @@ export const data = [
   rating: 9.2,
   year: 2019,
   description: "Explore Earth’s natural beauty.",
-  image: "https://image.tmdb.org/t/p/w500/9JXqXn7r9JXqXn7r9JXqXn7r9JX.jpg",
+    image: "https://image.tmdb.org/t/p/w500/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg",
   trailer: "https://www.youtube.com/embed/aETNYyrqNYE"
 },
 
-// ================= MORE DRAMA =================
 {
   id: 40,
   title: "Titanic",
@@ -555,7 +543,6 @@ export const data = [
   trailer: "https://www.youtube.com/embed/kVrqfYjkTdQ"
 },
 
-// ================= MORE BIOGRAPHY =================
 {
   id: 41,
   title: "The Imitation Game",
@@ -568,7 +555,6 @@ export const data = [
   trailer: "https://www.youtube.com/embed/S5CjKEFb-sM"
 },
 
-// Fillers to reach 50
 {
   id: 42,
   title: "Rocky",
@@ -654,7 +640,7 @@ export const data = [
   rating: 8.1,
   year: 2002,
   description: "A con artist evades the FBI.",
-  image: "https://image.tmdb.org/t/p/w500/syPWyeeqzTQGxW3Xif1eVQb4C2Z.jpg",
+    image: "https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
   trailer: "https://www.youtube.com/embed/s-7pyIxz8Qg"
 },
 {
