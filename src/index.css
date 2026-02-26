@@ -1221,3 +1221,209 @@ body.light .footer-section ul li:hover {
 /* 
 
 detals style */
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero-banner,
+  .music-hero,
+  .books-hero,
+  .home-hero {
+    padding-left: 40px;
+    height: 65vh;
+  }
+
+  .hero-content h1,
+  .music-hero-overlay h1,
+  .books-hero-overlay h1,
+  .home-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .row-title {
+    padding-left: 30px;
+  }
+
+  .movies-row,
+  .music-row,
+  .books-row,
+  .home-row,
+  .cart-row {
+    padding: 20px 30px;
+  }
+
+  .movie-card,
+  .music-card,
+  .book-card {
+    min-width: 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .links a {
+    margin: 8px 10px;
+  }
+
+  .hero-banner,
+  .music-hero,
+  .books-hero,
+  .home-hero {
+    padding-left: 20px;
+    height: 55vh;
+  }
+
+  .hero-content h1,
+  .music-hero-overlay h1,
+  .books-hero-overlay h1,
+  .home-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .home-section,
+  .cart-page {
+    padding: 20px;
+  }
+
+  .movies-row,
+  .music-row,
+  .books-row,
+  .home-row,
+  .cart-row {
+    padding: 15px;
+  }
+
+  .movie-card,
+  .music-card,
+  .book-card,
+  .home-card,
+  .cart-card-style {
+    min-width: 220px;
+  }
+
+  .movie-card img,
+  .book-card img,
+  .cart-card-style img {
+    height: 200px;
+  }
+
+  .hero-buttons button,
+  .home-hero-content button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+
+  .movies-row,
+  .music-row,
+  .books-row,
+  .home-row,
+  .cart-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .movie-card,
+  .music-card,
+  .book-card,
+  .home-card,
+  .cart-card-style {
+    min-width: unset;
+    width: 100%;
+  }
+}
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  transition: 0.3s;
+  /* padding: 30px 50px; */
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+    margin-left: 500px;
+  }
+
+  .links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--bg-secondary);
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    display: none;
+    box-shadow: -5px 10px 20px rgba(0,0,0,0.3);
+  }
+
+  .links.show {
+    display: flex;
+  }
+
+  .links a {
+    margin: 12px 0;
+  }
+
+  .theme-toggle {
+    margin-top: 15px;
+  }
+}
