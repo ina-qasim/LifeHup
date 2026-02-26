@@ -1391,7 +1391,6 @@ detals style */
 .hamburger span {
   width: 25px;
   height: 3px;
-    margin-top: -20px;
 
   background: var(--text-primary);
   transition: 0.3s;
@@ -1403,7 +1402,7 @@ detals style */
 
   .hamburger {
     display: flex;
-    padding-left: 350px;
+    margin-left: 400px;
   }
 
   .links {
