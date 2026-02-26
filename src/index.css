@@ -1403,7 +1403,7 @@ detals style */
 
   .hamburger {
     display: flex;
-    margin-left: 400px;
+    padding-left: 400px;
   }
 
   .links {
