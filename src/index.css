@@ -1385,11 +1385,14 @@ detals style */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
+    margin-top: -20px;
+
   background: var(--text-primary);
   transition: 0.3s;
   /* padding: 30px 50px; */
